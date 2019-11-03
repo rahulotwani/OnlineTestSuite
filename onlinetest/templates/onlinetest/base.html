@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>GLUG Auditions 2019</title>
         {% load static %}
         <link rel="stylesheet" type="text/css" media="screen" href="{% static 'onlinetest/css/main.css' %}" />
@@ -10,7 +12,7 @@
     <body>
 
    
-            <nav class="navbar navbar-expand-sm navbar-light fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-light">
       <div class="container nav-cont">
         <h4>GLUG Auditions 2019</h4>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -20,10 +22,10 @@
           <ul class="navbar-nav ml-auto">
             {% if not user.is_anonymous %}
             <li class="nav-item">
-              <a class="nav-link" style="color:white"><span class="fa fa-user pr-2"></span>{{ user }}</a>
+              <a class="nav-link"><span class="fa fa-user pr-2"></span>{{ user }}</a>
             </li>
             <li class="nav-item">
-              <a href="{{ '/logout/' }}" class="nav-link" style="color:white"><span class="fa fa-sign-out pr-2"></span>Logout</a>
+              <a href="{{ '/logout/' }}" class="nav-link"><span class="fa fa-sign-out pr-2"></span>Logout</a>
             </li>
             {% endif %}
           </ul>
